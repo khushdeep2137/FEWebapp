@@ -29,19 +29,18 @@ export class LoginComponent {
   onLogin() {
     this.isLogin = true
     this.authService.login(this.loginForm.value).subscribe(res => {
+      debugger
       console.log("response....", res);
-
+      if (res.success) {
+        localStorage.setItem('user', JSON.stringify(res.user));
+        localStorage.setItem('token', JSON.stringify(res.token));
+        this.route.navigate(['secure/users']);
+      }
+      else {
+        alert(res.message);
+      }
     })
-    let data = {
-      emailId: this.loginForm.value.email,
-      firstName: "william",
-      lastName: "Smith",
-      id: "1"
-    }
-    localStorage.setItem('user', JSON.stringify(data));
-    let token = "avczy35736384"
-    localStorage.setItem('token', JSON.stringify(token));
-    this.route.navigate(['secure/users']);
+
 
   }
 

@@ -8,9 +8,7 @@ export class AuthService {
   constructor(private httpService:HttpServices) { }
 
   login(data:any){
-    return this.httpService.post("/login",data);
-    
-
+    return this.httpService.post("Login",data);
   }
 
  
