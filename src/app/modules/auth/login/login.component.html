@@ -5,11 +5,11 @@
             <mat-card-content>
                 <mat-form-field class="FormFields">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Enter your email id" formControlName="email">
+                    <input matInput placeholder="enter your email" formControlName="email">
                 </mat-form-field>
                 <mat-form-field class="FormFields">
                     <mat-label>Password</mat-label>
-                    <input matInput type="password" placeholder="Enter your password" formControlName="password">
+                    <input matInput type="password" placeholder="enter your password" formControlName="password">
                     <mat-error *ngIf="loginForm.controls['password'].invalid">Password must be at least 6 characters long and contain at least one capital letter and one number.
                     </mat-error>
                 </mat-form-field>

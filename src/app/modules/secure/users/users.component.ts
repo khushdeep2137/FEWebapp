@@ -15,18 +15,22 @@ export class UsersComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort = new MatSort();
   @ViewChild(MatPaginator) paginator: any;
   constructor(private userService: UserService) { }
+  
+  
   ngOnInit() {
     this.dataSource = new MatTableDataSource();
-    this.userService.getData().subscribe(
-      (data: any) => {
-        this.dataSource.data = data;
-      },
-      (error: any) => console.log(error)
-    );
+    this.getUser();
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+  }
+
+  getUser(){
+    this.userService.getUser().subscribe(res=>{
+      console.log("response..",res)
+
+    })
   }
 
   sortData(event:any) {
