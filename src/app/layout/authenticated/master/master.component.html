@@ -1,0 +1,19 @@
+<section class="header">
+    <div>
+        <button mat-button class="nav_item">Users</button>
+        <button mat-button class="nav_item">Logins</button>
+    </div>
+    <div>
+        <button mat-button [matMenuTriggerFor]="menu"><img class="user_img" src="../../../../assets/images/user.png"
+                alt="user" draggable="false"></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="nav_btn">Logout</button>
+
+        </mat-menu>
+
+    </div>
+</section>
+
+<div class="card_box">
+    <router-outlet></router-outlet>
+</div>
