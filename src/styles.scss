@@ -2,3 +2,27 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// FOR LOGIN PAGE STYLING BEGINS
+
+
+.login_container{
+    .mdc-text-field--filled:not(.mdc-text-field--disabled){
+        background-color: #fff;
+        padding: 0;
+    }
+    .mat-mdc-form-field:hover .mat-mdc-form-field-focus-overlay{
+        opacity: 0;
+    }
+    .mat-mdc-form-field-error-wrapper{
+        position: unset;
+        padding: 0;
+    }
+    .mat-mdc-form-field-bottom-align::before{
+        height: auto;
+    }
+}
+
+
+// FOR LOGIN PAGE STYLING END

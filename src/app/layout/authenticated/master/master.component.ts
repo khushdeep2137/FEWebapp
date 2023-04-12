@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-master',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./master.component.scss']
 })
 export class AuthenticatedMasterComponent {
+  constructor(private route: Router) { }
 
+  ngOnInit(): void {
+  }
+
+  onLogout() {
+    localStorage.clear()
+    this.route.navigate(['/auth/login'])
+
+  }
 }
+
+

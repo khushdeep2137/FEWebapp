@@ -7,7 +7,7 @@
         <button mat-button [matMenuTriggerFor]="menu"><img class="user_img" src="../../../../assets/images/user.png"
                 alt="user" draggable="false"></button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item class="nav_btn">Logout</button>
+            <button mat-menu-item class="nav_btn" (click)="onLogout()">Logout</button>
 
         </mat-menu>
 
