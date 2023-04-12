@@ -130,7 +130,6 @@ export class HttpServices implements IHttpMethods {
   // }
 
   private generateUrl(rawUrl: String, options?: any): string {
-    debugger
     var url = environment._baseUri + rawUrl;
 
     if (options != null) {

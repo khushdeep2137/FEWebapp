@@ -30,7 +30,6 @@ export class HttpInterceptorService implements HttpInterceptor {
   constructor() {}
  
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    debugger
     request = request.clone({
       setHeaders: {
         Authorization: `Bearer`+ " " + `${localStorage.getItem('token')}`,
