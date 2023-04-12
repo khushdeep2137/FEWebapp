@@ -6,11 +6,11 @@ import { HttpServices } from './httpServices';
 })
 export class UserService {
 
-  
 
-  constructor(private httpService:HttpServices) { }
 
-  getUser() {
-    return this.httpService.get("user");
+  constructor(private httpService: HttpServices) { }
+
+  getUsers(filter = {}) {
+    return this.httpService.post("users", filter);
   }
 }

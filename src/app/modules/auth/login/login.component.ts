@@ -29,11 +29,10 @@ export class LoginComponent {
   onLogin() {
     this.isLogin = true
     this.authService.login(this.loginForm.value).subscribe(res => {
-      debugger
       console.log("response....", res);
       if (res.success) {
         localStorage.setItem('user', JSON.stringify(res.user));
-        localStorage.setItem('token', JSON.stringify(res.token));
+        localStorage.setItem('token',res.token);
         this.route.navigate(['secure/users']);
       }
       else {
